@@ -1,21 +1,13 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, ImageBackground} from 'react-native';
+import {Platform, StyleSheet, Text, View, ImageBackground, TouchableOpac} from 'react-native';
+import ChessBoard from './ChessBoard';
 
-export default class Game extends Component<Props> {
-  render() {
+export default class Game extends Component<Props>
+ {
+  render()
+   {
     return (
-      <ImageBackground
-        source={require('../assets/board.png')}
-        style={styles.container}>
-      </ImageBackground>
+      <ChessBoard></ChessBoard>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    width: '100%',
-    height: '100%'
-  }
-});
