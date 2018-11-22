@@ -1,11 +1,8 @@
-import React from 'react';
-import { createStackNavigator } from 'react-navigation';
-import Home from './components/Home';
-import Game from './components/Game';
+import React from "react";
+import Chess from "./src/App";
 
-const App = createStackNavigator({
-    Home: { screen: Home},
-    Game: { screen: Game}
-})
+const App = props => {
+  return <Chess />;
+};
 
 export default App;
