@@ -1,0 +1,111 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="mobile interpter">
+    <script src="./script/jquery-3.3.1.min.js"></script>
+    <title>Chess Game</title>
+
+</head>
+
+<style>
+    body {
+        background-image: url(./img/b2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .start-link {
+        position: absolute;
+        top: 25%;
+        left: 22%;
+    }
+    
+    .start {
+        background-image: url(./img/button_start-game.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 60vw;
+        height: 10vh;
+        cursor: pointer;
+    }
+    
+    .start:hover {
+        background-image: url(./img/button_start-game-highlighted.png)
+    }
+    
+    .a {
+        text-decoration: none;
+    }
+    
+    .exit-link {
+        position: absolute;
+        top: 60%;
+        left: 40%;
+    }
+    
+    .quit {
+        background-image: url(./img/button_quit.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 30vw;
+        height: 10vh;
+        cursor: pointer;
+    }
+    
+    .quit:hover {
+        background-image: url(./img/button_quit-highlighted.png)
+    }
+</style>
+
+<body>
+
+    <!-- start  app-->
+    <a class="start-link" href="./chessGame.html">
+        <div class="start">
+
+        </div>
+    </a>
+    <!--  <a class="exit-link" onclick="quit()">
+        <div class="quit">
+        </div>
+    </a> -->
+    <!--end app-->
+</body>
+<script>
+    var app = {
+        // Application Constructor
+        initialize: function() {
+            document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+        },
+
+        // deviceready Event Handler
+        //
+        // Bind any cordova events here. Common events are:
+        // 'pause', 'resume', etc.
+        onDeviceReady: function() {
+            this.receivedEvent('deviceready');
+        },
+
+        // Update DOM on a Received Event
+        receivedEvent: function(id) {
+            var parentElement = document.getElementById(id);
+            var listeningElement = parentElement.querySelector('.listening');
+            var receivedElement = parentElement.querySelector('.received');
+
+            listeningElement.setAttribute('style', 'display:none;');
+            receivedElement.setAttribute('style', 'display:block;');
+
+            console.log('Received Event: ' + id);
+        }
+    };
+
+    app.initialize();
+
+    function quit() {
+        app.plugins.exit();
+
+    }
+</script>
+
+</html>

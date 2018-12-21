@@ -1,0 +1,19 @@
+#gameArea {}
+
+#container {
+    /* For 100% screen height */
+    /* For 100% screen width */
+}
+
+#board {
+    border: 1px solid #171516;
+    padding-left: 0;
+    padding-right: 0;
+    display: block;
+}
+
+#playerTitle,
+#currentMove {
+    font-size: 2em;
+    font-weight: bold;
+}
